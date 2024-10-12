@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "15432:5432"
+    environment:
+      POSTGRES_DB: hacks
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    image: neutral-hub.cr.cloud.ru/hacks-backend:1.0
+    ports:
+      - "5001:5000"
+    environment:
+      - DATABASE_URL=postgresql://postgres:password@db:15432/hacks
+    depends_on:
+      - db
+    networks:
+      - app-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    image: neutral-hub.cr.cloud.ru/hacks-frontend:1.0
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    networks:
+      - app-network
+
+volumes:
+  postgres_data:
+
+networks:
+  app-network:
