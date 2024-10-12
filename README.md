@@ -57,13 +57,13 @@ dotnet ef database update --connection "Server=localhost,1433;Database=Materials
 Для повышения эффективности обнаружения дефектов на ноутбуках рекомендуется следовать ряду правил при создании фотографий. Качественные изображения помогут значительно улучшить точность распознавания и классификации дефектов. Примеры оптимальных ракурсов:
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <img src="1.jpg" alt="Изображение 1" width="500" style="flex: 1 1 calc(33% - 10px);"/>
-    <img src="2.jpg" alt="Изображение 2" width="500" style="flex: 1 1 calc(33% - 10px);"/>
-    <img src="5.jpg" alt="Изображение 3" width="500" style="flex: 1 1 calc(33% - 10px);"/>
-    <img src="6.jpg" alt="Изображение 4" width="500" style="flex: 1 1 calc(33% - 10px);"/>
+    <img src="1.jpg" alt="Изображение 1" width="250" style="flex: 1 1 calc(33% - 10px);"/>
+    <img src="2.jpg" alt="Изображение 2" width="250" style="flex: 1 1 calc(33% - 10px);"/>
+    <img src="5.jpg" alt="Изображение 3" width="250" style="flex: 1 1 calc(33% - 10px);"/>
+    <img src="6.jpg" alt="Изображение 4" width="250" style="flex: 1 1 calc(33% - 10px);"/>
     <div>
-     <img src="3.jpg" alt="Изображение 5" width="500" style="flex: 1 1 calc(33% - 10px);"/>
-    <img src="4.jpg" alt="Изображение 6" width="500" style="flex: 1 1 calc(33% - 10px);"/>
+     <img src="3.jpg" alt="Изображение 5" width="250" style="flex: 1 1 calc(33% - 10px);"/>
+    <img src="4.jpg" alt="Изображение 6" width="250" style="flex: 1 1 calc(33% - 10px);"/>
     </div>
 </div>
 
