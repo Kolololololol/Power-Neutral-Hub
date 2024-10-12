@@ -70,6 +70,9 @@ dotnet ef database update --connection "Server=localhost,1433;Database=Materials
 
 Следование этим рекомендациям обеспечит более эффектичвное распознавание дефектов на ноутбуке системой анализа.
 
+## Пример отчета в виде PDF
+[example1.pdf](https://github.com/user-attachments/files/17351304/example1.pdf)
+
 
 ### Пример работы нашего приложения вы можете увидеть на данном видео.
 
