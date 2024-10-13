@@ -25,45 +25,74 @@
 
 Серверная часть: Flask
 
+Нейронная сеть: YOLO11 (torch, opencv)
+
 База данных: PostgreSQL
 
 Контейнеризация: Docker, Docker Compose
 
 ## Запуск проекта
 
-Для запуска проекта требуется требуется:
+Для запуска проекта локально требуется:
 
 *1. Установить Docker Desktop с оффициального сайта.*
 
-*2. Для запуска всего приложения в папке `/ProcurementMaterialAPI` требуется выполнить следующую команду:*
+*2. Для запуска приложения в корне репозитория требуется выполнить следующую команду:*
 
 ```cmd
 docker-compose up --build
 ```
 
-После установки всех библиотек и зависимостей будет созданно 3 docker контейнера:
-- _frontend_ - с frontend частью проекта на порту 3000
-- _api_ - с API на порту 8080
-- _mssql_ - база данных MsSQL на порту 1433
 
-*3. После требуется выполнить миграцию базы данных следующей командой:*
+## Запуск проекта на виртуальной машине:
+
+Для запуска проекта на виртуальной машине выполните следующие шаги:
+
+*1. Установить Docker и Docker Compose на виртуальную машину.*
 
 ```cmd
-dotnet ef database update --connection "Server=localhost,1433;Database=Materials;User=sa;Password=Passw0rd;TrustServerCertificate=True;"
+sudo apt-get update
+sudo apt-get install -y docker.io
+sudo apt-get install -y docker-compose
 ```
+
+*2. Клонировать репозиторий с проектом на виртуальную машину.*
+
+```cmd
+git clone https://github.com/Kolololololol/Power-Neutral-Hub.git
+cd Power-Neutral-Hub
+```
+
+*3. Построить и запустить контейнеры с использованием Docker Compose.*
+
+```cmd
+docker-compose up --build
+```
+
+*4. Если вы получили ошибку разрешения, добавьте текущего пользователя в группу Docker и перезапустите терминал.*
+
+```cmd
+sudo usermod -aG docker $USER
+```
+
+После установки всех библиотек и зависимостей будет созданно 3 docker контейнера:
+- _frontend_ - с frontend частью проекта на порту 3000
+- _backend_ - с API на порту 5000
+- _db_ - база данных Postgresql на порту 15432
+
 
 ## Руководство по фотографированию ноутбуков для более эффективного обнаружения дефектов
 
 Для повышения эффективности обнаружения дефектов на ноутбуках рекомендуется следовать ряду правил при создании фотографий. Качественные изображения помогут значительно улучшить точность распознавания и классификации дефектов. Примеры оптимальных ракурсов:
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-    <img src="1.jpg" alt="Изображение 1" width="390" style="flex: 1 1 calc(33% - 10px);"/>
-    <img src="2.jpg" alt="Изображение 2" width="390" style="flex: 1 1 calc(33% - 10px);"/>
-    <img src="5.jpg" alt="Изображение 3" width="390" style="flex: 1 1 calc(33% - 10px);"/>
-    <img src="6.jpg" alt="Изображение 4" width="390" style="flex: 1 1 calc(33% - 10px);"/>
+    <img src="images for readme/1.jpg" alt="Изображение 1" width="390" style="flex: 1 1 calc(33% - 10px);"/>
+    <img src="images for readme/2.jpg" alt="Изображение 2" width="390" style="flex: 1 1 calc(33% - 10px);"/>
+    <img src="images for readme/5.jpg" alt="Изображение 3" width="390" style="flex: 1 1 calc(33% - 10px);"/>
+    <img src="images for readme/6.jpg" alt="Изображение 4" width="390" style="flex: 1 1 calc(33% - 10px);"/>
     <div>
-     <img src="3.jpg" alt="Изображение 5" width="390" style="flex: 1 1 calc(33% - 10px);"/>
-    <img src="4.jpg" alt="Изображение 6" width="390" style="flex: 1 1 calc(33% - 10px);"/>
+     <img src="images for readme/3.jpg" alt="Изображение 5" width="390" style="flex: 1 1 calc(33% - 10px);"/>
+    <img src="images for readme/4.jpg" alt="Изображение 6" width="390" style="flex: 1 1 calc(33% - 10px);"/>
     </div>
 </div>
 
