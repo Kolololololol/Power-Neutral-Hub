@@ -105,4 +105,8 @@ sudo usermod -aG docker $USER
 
 ### Пример работы нашего приложения вы можете увидеть на данном видео.
 
-https://github.com/Fresh-vano/ProcurementMaterial/assets/74467916/9369635e-aad1-4a9d-8795-1c26e6a5a35c
+
+https://github.com/user-attachments/assets/f1de8aec-732a-47d0-ac87-f0bd8204a6c2
+
+
+
