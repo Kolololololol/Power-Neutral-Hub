@@ -25,6 +25,8 @@
 
 Серверная часть: Flask
 
+Нейронная сеть: YOLO11 (torch, opencv)
+
 База данных: PostgreSQL
 
 Контейнеризация: Docker, Docker Compose
